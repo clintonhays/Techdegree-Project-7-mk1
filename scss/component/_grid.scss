@@ -2,26 +2,34 @@
 /*              Grid System                      */
 /* ============================================= */
 
-.container {
+/* ============================================= */
+/*            	Grid Layout	                     */
+/* ============================================= */
+
+header {
+	grid-area: head;
+}
+
+nav {
+	grid-area: navi;
+}
+
+main {
+	grid-area: main;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto;
+	grid-template-areas: 'head' 'navi' 'main';
 	padding: 0 10px;
 }
 
-.row {
-	display: flex;
-	flex-direction: column;
-	padding: 1em 10px;
-}
+/* ============================================= */
+/*                Main Grid                      */
+/* ============================================= */
 
-[class^=col] {
-	@include col-style;
-}
-
-@for $i from 1 through 12 {
-	.theme.col-#{$i} {
-		background-color: adjust-hue($default-color, $i * 52);
-	}
-}
-
-.card {
-	flex-basis: 100%;
+main {
+	display: grid;
 }

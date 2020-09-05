@@ -484,74 +484,34 @@ a {
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
-.container {
+/* ============================================= */
+/*            	Grid Layout	                     */
+/* ============================================= */
+header {
+  grid-area: head;
+}
+
+nav {
+  grid-area: navi;
+}
+
+main {
+  grid-area: main;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas: 'head' 'navi' 'main';
   padding: 0 10px;
 }
 
-.row {
-  display: flex;
-  flex-direction: column;
-  padding: 1em 10px;
-}
-
-[class^=col] {
-  margin-top: 10px;
-  flex-basis: 100%;
-  min-height: 25px;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.theme.col-1 {
-  background-color: #5951fc;
-}
-
-.theme.col-2 {
-  background-color: #ed51fc;
-}
-
-.theme.col-3 {
-  background-color: #fc5176;
-}
-
-.theme.col-4 {
-  background-color: #fcc051;
-}
-
-.theme.col-5 {
-  background-color: #a4fc51;
-}
-
-.theme.col-6 {
-  background-color: #51fc92;
-}
-
-.theme.col-7 {
-  background-color: #51d2fc;
-}
-
-.theme.col-8 {
-  background-color: #6551fc;
-}
-
-.theme.col-9 {
-  background-color: #f951fc;
-}
-
-.theme.col-10 {
-  background-color: #fc516b;
-}
-
-.theme.col-11 {
-  background-color: #fccb51;
-}
-
-.theme.col-12 {
-  background-color: #99fc51;
-}
-
-.card {
-  flex-basis: 100%;
+/* ============================================= */
+/*                Main Grid                      */
+/* ============================================= */
+main {
+  display: grid;
 }
 
 /* ============================================= */
@@ -576,6 +536,14 @@ a {
 .nav-link:hover {
   color: #fff;
   background-color: #58e1c1;
+}
+
+/* ============================================= */
+/*                   Charts                      */
+/* ============================================= */
+.canvas-container-full,
+.canvas-container-half {
+  width: 95vw;
 }
 
 /* ============================================= */
@@ -610,82 +578,32 @@ a {
 /*              Media Queries                    */
 /* ============================================= */
 @media (min-width: 768px) {
-  .container {
-    max-width: 1400px;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+  .grid-container {
+    grid-template-columns: 55px 1fr;
+    grid-template-areas: "head head" "navi main";
   }
-  .centered {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+  main {
+    grid-template-columns: 1fr 1fr;
   }
-  .row {
-    flex-direction: row;
+  .traffic,
+  .social-stats {
+    grid-column: 1 / span 2;
   }
-  [class^=col] {
-    display: flex;
-    justify-content: center;
-    margin-top: 0;
-    align-items: center;
+  .daily-traffic,
+  .new-members,
+  .message-user {
+    grid-column: 1 / span 1;
   }
-  [class^=col] + [class^=col] {
-    margin-left: 10px;
+  .mobile-users,
+  .recent-activity,
+  .settings {
+    grid-column: 2 / span 1;
   }
-  .col-1 {
-    flex-basis: 8.33%;
+  .canvas-container.full {
+    width: 90vw;
   }
-  .col-2 {
-    flex-basis: 16.67%;
-  }
-  .col-3 {
-    flex-basis: 25.00%;
-  }
-  .col-4 {
-    flex-basis: 33.33%;
-  }
-  .col-5 {
-    flex-basis: 41.67%;
-  }
-  .col-6 {
-    flex-basis: 50.00%;
-  }
-  .col-7 {
-    flex-basis: 58.33%;
-  }
-  .col-8 {
-    flex-basis: 66.67%;
-  }
-  .col-9 {
-    flex-basis: 75.00%;
-  }
-  .col-10 {
-    flex-basis: 83.33%;
-  }
-  .col-11 {
-    flex-basis: 91.67%;
-  }
-  .col-12 {
-    flex-basis: 100%;
-  }
-  .nav {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .nav-link {
-    flex-basis: 100px;
-  }
-  .btn {
-    padding: 10px 30px;
-  }
-  .btn + .btn {
-    margin-left: 10px;
-  }
-  .logo {
-    margin-left: initial;
-    margin-right: initial;
+  .canvas-container.half {
+    width: 45vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */
