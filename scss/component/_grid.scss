@@ -1,0 +1,27 @@
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+
+.container {
+	padding: 0 10px;
+}
+
+.row {
+	display: flex;
+	flex-direction: column;
+	padding: 1em 10px;
+}
+
+[class^=col] {
+	@include col-style;
+}
+
+@for $i from 1 through 12 {
+	.theme.col-#{$i} {
+		background-color: adjust-hue($default-color, $i * 52);
+	}
+}
+
+.card {
+	flex-basis: 100%;
+}

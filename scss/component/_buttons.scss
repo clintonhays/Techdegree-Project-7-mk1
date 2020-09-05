@@ -1,0 +1,24 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+	@include btn-style;
+}
+
+$buttons: (
+	default: $default-color,
+	error: $error-color,
+	info: $info-color,
+	success: $success-color,
+	warning: $warning-color
+);
+
+@each $btn, $color in $buttons {
+	.#{$btn} {
+		background-color: #{$color};
+		&:hover {
+			background-color: lighten($color, 10%);
+		}
+	}
+}

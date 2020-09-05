@@ -1,0 +1,76 @@
+@mixin margin-auto-center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+@mixin quote {
+	font-size: 1.5em;
+	font-weight: $base-weight;
+	font-style: italic;
+	margin-left: 20px;
+	padding-left: 20px;
+	border-left: 8px solid $accent-color;
+	border-radius: 5px;
+}
+
+@mixin btn-style {
+	margin-top: 15px;
+	width: 100%;
+	color: $white;
+	border: none;
+	padding: 10px 0;
+	text-transform: uppercase;
+	border-radius: 5px;
+}
+
+@mixin input-style ($width) {
+	display: block;
+	width: $width;
+	margin: 10px auto 0;
+	border: none;
+	padding: 10px;
+	border-bottom: 5px solid $accent-color;
+}
+
+@mixin screen-reader-only {
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+
+@mixin col-style {
+	margin-top: 10px;
+	flex-basis: 100%;
+	min-height: 25px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+@mixin avatar-style {
+	display: block;
+	@include margin-auto-center;
+	margin-top: 10px;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+@mixin frame-style ($width) {
+	display: block;
+	@include margin-auto-center;
+	margin-top: 10px;
+	max-width: $width;
+	padding: 13px;
+	border: 1px solid $grey-light;
+}
+
+@mixin nav-link-style ($width) {
+	text-align: center;
+	border-radius: 5px;
+	padding: 10px 0;
+	display: block;
+	width: $width;
+	transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}

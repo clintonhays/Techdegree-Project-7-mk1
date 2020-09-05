@@ -1,0 +1,16 @@
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
+
+.img-avatar {
+	@include avatar-style;
+}
+
+.img-frame {
+	@include frame-style (100%);
+}
+
+.img-logo {
+	display: block;
+	@include margin-auto-center;
+}
