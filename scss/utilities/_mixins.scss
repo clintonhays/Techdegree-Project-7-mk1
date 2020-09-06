@@ -3,6 +3,13 @@
 	margin-left: auto;
 }
 
+@mixin app-name {
+	display: inline-block;
+	font-family: sans-serif;
+	font-weight: 100;
+	font-size: 1.5em;
+}
+
 @mixin quote {
 	font-size: 1.5em;
 	font-weight: $base-weight;
@@ -50,11 +57,10 @@
 }
 
 @mixin avatar-style {
-	display: block;
+	display: inline-block;
 	@include margin-auto-center;
-	margin-top: 10px;
-	max-width: 100%;
-	max-height: 100%;
+	max-width: 50px;
+	max-height: 50px;
 }
 
 @mixin frame-style ($width) {

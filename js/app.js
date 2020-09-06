@@ -15,9 +15,9 @@ alertBanner.addEventListener('click', (e) => {
 	}
 });
 
-//							 //
-// - - - - - Chart - - - - - //
-// 							 //
+//							      //
+// - - - - - Line Chart - - - - - //
+// 							      //
 
 let myChart = document.getElementById('trafficChart').getContext('2d');
 
