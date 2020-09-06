@@ -20,7 +20,7 @@ main {
 
 .grid-container {
 	display: grid;
-	grid-template-columns: 100%;
+	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	grid-template-areas: 'head' 'navi' 'main';
 	padding: 0 10px;

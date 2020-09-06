@@ -14,3 +14,37 @@ alertBanner.addEventListener('click', (e) => {
 		alertBanner.style.display = 'none';
 	}
 });
+
+//							 //
+// - - - - - Chart - - - - - //
+// 							 //
+
+let myChart = document.getElementById('trafficChart').getContext('2d');
+
+let massPopChart = new Chart(myChart, {
+	type    : 'bar',
+	data    : {
+		labels   : [
+			'Boston',
+			'Worcester',
+			'Springfield',
+			'Lowell',
+			'Cambridge',
+			'New Bedford'
+		],
+		datasets : [
+			{
+				label : 'Population',
+				data  : [
+					600000,
+					180000,
+					150000,
+					106000,
+					105000,
+					95000
+				]
+			}
+		]
+	},
+	options : {}
+});

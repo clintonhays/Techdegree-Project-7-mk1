@@ -1,15 +1,3 @@
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
-
-.form {
-	flex-basis: 100%;
-}
-
-.input {
-	@include input-style(94%);
-}
-
-.sr-only {
-	@include screen-reader-only;
-}

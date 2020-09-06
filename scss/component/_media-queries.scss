@@ -1,7 +1,7 @@
 /* ============================================= */
 /*              Media Queries                    */
 /* ============================================= */
-@media (min-width: $sm) {
+@media (min-width: 768px) {
 	.grid-container {
 		grid-template-columns: 55px 1fr;
 		grid-template-areas: "head head" "navi main";

@@ -358,129 +358,18 @@ template {
 /* ============================================= */
 /*              Base styles                      */
 /* ============================================= */
-* {
-  font-family: "Lato", sans-serif;
-  color: #777;
-  box-sizing: border-box;
-}
-
-p {
-  line-height: 1.45em;
-}
-
-a {
-  text-decoration: none;
-}
-
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
-.headline-primary {
-  color: #58e1c1;
-  margin-left: 10px;
-}
-
-.headline-secondary {
-  font-weight: 300;
-  color: #777;
-}
-
-.link {
-  color: #51ddfc;
-  font-weight: 700;
-}
-
-.blockquote {
-  font-size: 1.5em;
-  font-weight: 300;
-  font-style: italic;
-  margin-left: 20px;
-  padding-left: 20px;
-  border-left: 8px solid #58e1c1;
-  border-radius: 5px;
-}
-
 /* ============================================= */
 /*          Components Imports                   */
 /* ============================================= */
 /* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
-.btn {
-  margin-top: 15px;
-  width: 100%;
-  color: #fff;
-  border: none;
-  padding: 10px 0;
-  text-transform: uppercase;
-  border-radius: 5px;
-}
-
-.default {
-  background-color: #51ddfc;
-}
-
-.default:hover {
-  background-color: #83e7fd;
-}
-
-.error {
-  background-color: #e4757a;
-}
-
-.error:hover {
-  background-color: #eca0a3;
-}
-
-.info {
-  background-color: #927bc1;
-}
-
-.info:hover {
-  background-color: #af9ed1;
-}
-
-.success {
-  background-color: #63cc82;
-}
-
-.success:hover {
-  background-color: #89d9a1;
-}
-
-.warning {
-  background-color: #fd7856;
-}
-
-.warning:hover {
-  background-color: #fea088;
-}
-
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
-.form {
-  flex-basis: 100%;
-}
-
-.input {
-  display: block;
-  width: 94%;
-  margin: 10px auto 0;
-  border: none;
-  padding: 10px;
-  border-bottom: 5px solid #58e1c1;
-}
-
-.sr-only {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
@@ -501,7 +390,7 @@ main {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-template-areas: 'head' 'navi' 'main';
   padding: 0 10px;
@@ -517,27 +406,6 @@ main {
 /* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
-.nav {
-  padding-left: 0;
-  flex-basis: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-link {
-  text-align: center;
-  border-radius: 5px;
-  padding: 10px 0;
-  display: block;
-  width: 100%;
-  transition: background-color .2s ease-in-out, color .2s ease-in-out;
-}
-
-.nav-link:hover {
-  color: #fff;
-  background-color: #58e1c1;
-}
-
 /* ============================================= */
 /*                   Charts                      */
 /* ============================================= */

@@ -2,39 +2,6 @@
 /*              Base styles                      */
 /* ============================================= */
 
-* {
-	font-family: $sans-serif;
-	color: $grey;
-	box-sizing: border-box;
-}
-
-p {
-	line-height: 1.45em;
-}
-
-a {
-	text-decoration: none;
-}
-
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
-
-.headline-primary {
-	color: $accent-color;
-	margin-left: 10px;
-}
-
-.headline-secondary {
-	font-weight: $base-weight;
-	color: $grey;
-}
-
-.link {
-	color: $default-color;
-	font-weight: $bold-weight;
-}
-
-.blockquote {
-	@include quote;
-}
