@@ -23,7 +23,12 @@ main {
 	grid-template-columns: 1fr;
 	grid-template-rows: auto;
 	grid-template-areas: 'head' 'navi' 'main';
-	padding: 0 10px;
+}
+
+.toggle-switches {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
 }
 
 /* ============================================= */
