@@ -19,10 +19,78 @@ alertBanner.addEventListener('click', (e) => {
 // - - - - - Line Chart - - - - - //
 // 							      //
 
-let myChart = document.getElementById('trafficChart').getContext('2d');
+let trafficChart = document.getElementById('trafficChart').getContext('2d');
 
-let massPopChart = new Chart(myChart, {
+let massPopChart = new Chart(trafficChart, {
+	type    : 'line',
+	data    : {
+		labels   : [
+			'Boston',
+			'Worcester',
+			'Springfield',
+			'Lowell',
+			'Cambridge',
+			'New Bedford'
+		],
+		datasets : [
+			{
+				label : 'Population',
+				data  : [
+					600000,
+					180000,
+					150000,
+					106000,
+					105000,
+					95000
+				]
+			}
+		]
+	},
+	options : {}
+});
+
+//							      //
+// - - - - - Bar Chart - - - - - //
+// 							      //
+
+let dailyTrafficChart = document.getElementById('dailyChart').getContext('2d');
+
+let massPopChart2 = new Chart(dailyTrafficChart, {
 	type    : 'bar',
+	data    : {
+		labels   : [
+			'Boston',
+			'Worcester',
+			'Springfield',
+			'Lowell',
+			'Cambridge',
+			'New Bedford'
+		],
+		datasets : [
+			{
+				label : 'Population',
+				data  : [
+					600000,
+					180000,
+					150000,
+					106000,
+					105000,
+					95000
+				]
+			}
+		]
+	},
+	options : {}
+});
+
+//							          //
+// - - - - - Doughnut Chart - - - - - //
+// 							          //
+
+let mobileChart = document.getElementById('mobileChart').getContext('2d');
+
+let massPopChart3 = new Chart(mobileChart, {
+	type    : 'doughnut',
 	data    : {
 		labels   : [
 			'Boston',
