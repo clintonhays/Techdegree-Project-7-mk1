@@ -375,12 +375,44 @@ h1 span {
   font-weight: bold;
 }
 
+.search-alert-grid h2 {
+  text-align: center;
+  font-size: 1.875em;
+  margin: auto;
+}
+
+.social-stats h3,
+.new-members h3,
+.recent-activity h3 {
+  text-align: center;
+}
+
 /* ============================================= */
 /*          Components Imports                   */
 /* ============================================= */
 /* ============================================= */
 /*              Buttons                          */
 /* ============================================= */
+.alert-banner {
+  border-radius: 5px;
+  padding: 5px;
+  background: #fd1700;
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 0px 3px 3px rgba(253, 23, 0, 0.2);
+}
+
+.alert-banner p {
+  margin: 0;
+}
+
+.alert-banner .alert-banner-close {
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
 /* ============================================= */
 /*           Toggle Switches                     */
 /* ============================================= */
@@ -703,12 +735,12 @@ h1 span {
   }
   .switch-ios.switch-light input:checked ~ span a {
     left: 100%;
-    border-color: #4bd865;
+    border-color: #478c5c;
     margin-left: -2em;
   }
   .switch-ios.switch-light input:checked ~ span {
-    border-color: #4bd865;
-    box-shadow: inset 0 0 0 30px #4bd865;
+    border-color: #478c5c;
+    box-shadow: inset 0 0 0 30px #478c5c;
   }
   .switch-ios.switch-light input:checked ~ span span:first-of-type {
     opacity: 0;
@@ -724,7 +756,7 @@ h1 span {
     box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
   }
   .switch-ios.switch-toggle a {
-    background-color: #4bd865;
+    background-color: #478c5c;
     border: 0.125em solid #d8d9db;
     border-radius: 1.75em;
     transition: all 0.12s ease-out;
@@ -744,6 +776,26 @@ h1 span {
 /* ============================================= */
 /*              Forms                            */
 /* ============================================= */
+.main-header-search {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-header-search .top-search {
+  width: 90%;
+  height: 1.6em;
+  background-color: #f5f6f0;
+  box-shadow: none;
+  border-style: none;
+  border-bottom: 2px solid #b1d8b7;
+}
+
+.main-header-search:focus {
+  outline-color: #b1d8b7;
+}
+
 /* ============================================= */
 /*              Grid System                      */
 /* ============================================= */
@@ -767,6 +819,7 @@ main {
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas: 'head' 'navi' 'main';
+  background-color: #f5f6f0;
 }
 
 /* ============================================= */
@@ -787,6 +840,7 @@ main {
 
 .header-grid div svg {
   padding-top: 15px;
+  padding-right: 10px;
 }
 
 .header-grid .username {
@@ -800,10 +854,6 @@ main {
 /* ============================================= */
 /*               Main Grid                       */
 /* ============================================= */
-main {
-  display: grid;
-}
-
 /* ============================================= */
 /*               Search-Alert Grid               */
 /* ============================================= */
@@ -824,41 +874,8 @@ main {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: 'dashboard' 'search' 'alert';
-}
-
-.search-alert-grid h2 {
-  text-align: center;
-  font-size: 2.5em;
-  margin: auto;
-}
-
-.search-alert-grid .main-header-search {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-alert-grid .main-header-search input {
-  width: 90%;
-  height: 1.6em;
-}
-
-.search-alert-grid .alert-banner {
-  display: flex;
-  justify-content: space-around;
-  width: 90%;
-  margin: 0 auto;
-  background-color: darkgray;
-}
-
-.search-alert-grid .alert-banner p {
-  margin: 0;
-}
-
-.search-alert-grid .alert-banner .alert-banner-close {
-  padding-right: 20px;
-  padding-top: 5px;
+  border-bottom: 1px solid #478c5c;
+  padding-bottom: 10px;
 }
 
 /* ============================================= */
@@ -894,6 +911,7 @@ main {
   grid-template-rows: 1fr 1.5fr;
   grid-template-areas: 'title-traffic' 'chart-traffic';
   padding-bottom: 20px;
+  border-bottom: 1px solid #478c5c;
 }
 
 /* ============================================= */
@@ -914,7 +932,7 @@ main {
   grid-template-columns: 1fr;
   grid-template-rows: 0.25fr 1fr;
   grid-template-areas: 'title-daily' 'dtchart';
-  padding-bottom: 20px;
+  padding: 20px 0px;
 }
 
 .mobile-users h3 {
@@ -933,21 +951,19 @@ main {
   grid-template-rows: 0.25fr 1fr;
   grid-template-areas: 'title-mobile' 'muchart';
   padding-bottom: 20px;
+  border-bottom: 1px solid #478c5c;
 }
 
 /* ============================================= */
 /*               Social Stats Grid               */
 /* ============================================= */
-.social-stats h3 {
-  text-align: center;
-}
-
 .social-container {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   row-gap: 2em;
   padding-bottom: 20px;
+  border-bottom: 1px solid #478c5c;
 }
 
 .twitter,
@@ -989,6 +1005,7 @@ main {
   grid-template-rows: repeat(autofit, 1fr);
   row-gap: 2em;
   padding-bottom: 20px;
+  border-bottom: 1px solid #478c5c;
 }
 
 .new-members h3,
@@ -1109,6 +1126,7 @@ button {
   display: flex;
   justify-content: space-around;
   padding: 5px;
+  background-color: #b1d8b7;
 }
 
 /* ============================================= */
@@ -1128,7 +1146,7 @@ button {
   margin-left: auto;
   max-width: 50px;
   max-height: 50px;
-  border-left: 3px solid white;
+  border-left: 1px solid #b1d8b7;
   padding-left: 5px;
   padding-top: 5px;
 }

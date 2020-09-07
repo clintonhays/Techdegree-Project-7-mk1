@@ -19,10 +19,9 @@ main {
 }
 
 .grid-container {
-	display: grid;
-	grid-template-columns: auto;
-	grid-template-rows: auto;
+	@include grid-layout(auto, auto);
 	grid-template-areas: 'head' 'navi' 'main';
+	background-color: $background-color;
 }
 
 /* ============================================= */
@@ -39,6 +38,7 @@ main {
 
 		svg {
 			padding-top: 15px;
+			padding-right: 10px;
 		}
 	}
 
@@ -55,9 +55,9 @@ main {
 /*               Main Grid                       */
 /* ============================================= */
 
-main {
-	display: grid;
-}
+// main {
+// 	display: grid;
+// }
 
 /* ============================================= */
 /*               Search-Alert Grid               */
@@ -78,41 +78,8 @@ main {
 .search-alert-grid {
 	@include grid-layout(repeat(3, 1fr), 1fr);
 	grid-template-areas: 'dashboard' 'search' 'alert';
-
-	h2 {
-		text-align: center;
-		font-size: 2.5em;
-		margin: auto;
-	}
-
-	.main-header-search {
-		display: flex;
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-
-		input {
-			width: 90%;
-			height: 1.6em;
-		}
-	}
-
-	.alert-banner {
-		display: flex;
-		justify-content: space-around;
-		width: 90%;
-		margin: 0 auto;
-		background-color: darkgray;
-
-		p {
-			margin: 0;
-		}
-
-		.alert-banner-close {
-			padding-right: 20px;
-			padding-top: 5px;
-		}
-	}
+	border-bottom: 1px solid $dark-accent-color;
+	padding-bottom: 10px;
 }
 
 /* ============================================= */
@@ -147,6 +114,7 @@ main {
 	@include grid-layout(1fr 1.5fr, 1fr);
 	grid-template-areas: 'title-traffic' 'chart-traffic';
 	padding-bottom: 20px;
+	border-bottom: 1px solid $dark-accent-color;
 }
 
 /* ============================================= */
@@ -166,7 +134,7 @@ main {
 .daily-traffic {
 	@include grid-layout(.25fr 1fr, 1fr);
 	grid-template-areas: 'title-daily' 'dtchart';
-	padding-bottom: 20px;
+	padding: 20px 0px;
 }
 
 .mobile-users h3 {
@@ -183,22 +151,18 @@ main {
 	@include grid-layout(.25fr 1fr, 1fr);
 	grid-template-areas: 'title-mobile' 'muchart';
 	padding-bottom: 20px;
+	border-bottom: 1px solid $dark-accent-color;
 }
 
 /* ============================================= */
 /*               Social Stats Grid               */
 /* ============================================= */
 
-.social-stats {
-	h3 {
-		text-align: center;
-	}
-}
-
 .social-container {
 	@include grid-layout(repeat(3, 1fr), 1fr);
 	row-gap: 2em;
 	padding-bottom: 20px;
+	border-bottom: 1px solid $dark-accent-color;
 }
 
 .twitter,
@@ -231,6 +195,7 @@ main {
 	@include grid-layout(repeat(autofit, 1fr), 1fr);
 	row-gap: 2em;
 	padding-bottom: 20px;
+	border-bottom: 1px solid $dark-accent-color;
 
 	h3 {
 		text-align: center;
