@@ -3,6 +3,10 @@
 	margin-left: auto;
 }
 
+@mixin round {
+	border-radius: 50%;
+}
+
 @mixin app-name {
 	display: inline-block;
 	font-family: sans-serif;
@@ -61,6 +65,18 @@
 	@include margin-auto-center;
 	max-width: 50px;
 	max-height: 50px;
+}
+
+@mixin avatar-style-med {
+	display: inline-block;
+	@include margin-auto-center;
+	max-width: 75px;
+	max-height: 75px;
+}
+
+@mixin profile-img {
+	@include avatar-style-med;
+	@include round;
 }
 
 @mixin frame-style ($width) {

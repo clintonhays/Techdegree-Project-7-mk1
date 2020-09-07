@@ -25,12 +25,6 @@ main {
 	grid-template-areas: 'head' 'navi' 'main';
 }
 
-.toggle-switches {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: auto;
-}
-
 /* ============================================= */
 /*            	 Header Grid                     */
 /* ============================================= */
@@ -251,4 +245,145 @@ main {
 	.social-text p {
 		display: inline-block;
 	}
+}
+
+/* ============================================= */
+/*               New Members Grid                */
+/* ============================================= */
+
+.new-members {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(autofit, 1fr);
+	row-gap: 2em;
+	padding: 5px 10px;
+	padding-bottom: 20px;
+
+	h3 {
+		text-align: center;
+	}
+}
+
+.member-container {
+	text-align: center;
+}
+
+/* ============================================= */
+/*               Recent Activity Grid            */
+/* ============================================= */
+
+.recent-activity {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(autofit, 1fr);
+	row-gap: 2em;
+	padding: 5px 10px;
+	padding-bottom: 20px;
+
+	h3 {
+		text-align: center;
+	}
+}
+
+/* ============================================= */
+/*               Message User Grid               */
+/* ============================================= */
+
+.message-user {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(autofit, 1fr);
+	row-gap: 2em;
+	padding: 5px 10px;
+	padding-bottom: 20px;
+
+	h3 {
+		text-align: center;
+	}
+
+	form {
+		@include margin-auto-center;
+	}
+
+	.form-field,
+	.form-area {
+		width: 100%;
+		margin: auto;
+		margin-bottom: 1em;
+		padding: 0;
+		border: none;
+		border-radius: 5px;
+		resize: none;
+	}
+
+	.button-primary {
+		width: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+// Style placeholder text
+::placeholder {
+	padding-left: 10px;
+}
+
+/* ============================================= */
+/*               Settings Grid                   */
+/* ============================================= */
+
+.settings {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(autofit, 1fr);
+	row-gap: 2em;
+	padding: 5px 10px;
+	padding-bottom: 20px;
+
+	h3 {
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+	.form-field {
+		width: 100%;
+		margin: auto;
+		margin-bottom: 1em;
+		padding: 0;
+		border: none;
+		border-radius: 5px;
+		resize: none;
+	}
+
+	label {
+		display: block;
+		width: 75px;
+		margin: auto;
+	}
+
+	p {
+		display: block;
+	}
+}
+
+.toggle-switches {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+
+	.email-toggle,
+	.profile-toggle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.settings-buttons {
+	text-align: center;
+}
+
+button {
+	width: 45%;
+	display: inline;
 }

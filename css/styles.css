@@ -677,7 +677,7 @@ h1 span {
   }
   .switch-ios.switch-light > span {
     display: block;
-    width: 25%;
+    width: 100%;
     height: 2em;
     background-color: #d8d9db;
     border-radius: 1.75em;
@@ -687,7 +687,7 @@ h1 span {
     position: absolute;
     top: 0;
     left: 0;
-    width: 25%;
+    width: 100%;
     opacity: 0;
     line-height: 1.875em;
     vertical-align: middle;
@@ -766,12 +766,6 @@ main {
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas: 'head' 'navi' 'main';
-}
-
-.toggle-switches {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
 }
 
 /* ============================================= */
@@ -1018,6 +1012,143 @@ main {
 }
 
 /* ============================================= */
+/*               New Members Grid                */
+/* ============================================= */
+.new-members {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(autofit, 1fr);
+  row-gap: 2em;
+  padding: 5px 10px;
+  padding-bottom: 20px;
+}
+
+.new-members h3 {
+  text-align: center;
+}
+
+.member-container {
+  text-align: center;
+}
+
+/* ============================================= */
+/*               Recent Activity Grid            */
+/* ============================================= */
+.recent-activity {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(autofit, 1fr);
+  row-gap: 2em;
+  padding: 5px 10px;
+  padding-bottom: 20px;
+}
+
+.recent-activity h3 {
+  text-align: center;
+}
+
+/* ============================================= */
+/*               Message User Grid               */
+/* ============================================= */
+.message-user {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(autofit, 1fr);
+  row-gap: 2em;
+  padding: 5px 10px;
+  padding-bottom: 20px;
+}
+
+.message-user h3 {
+  text-align: center;
+}
+
+.message-user form {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.message-user .form-field,
+.message-user .form-area {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1em;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.message-user .button-primary {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+::placeholder {
+  padding-left: 10px;
+}
+
+/* ============================================= */
+/*               Settings Grid                   */
+/* ============================================= */
+.settings {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(autofit, 1fr);
+  row-gap: 2em;
+  padding: 5px 10px;
+  padding-bottom: 20px;
+}
+
+.settings h3 {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.settings .form-field {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1em;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+.settings label {
+  display: block;
+  width: 75px;
+  margin: auto;
+}
+
+.settings p {
+  display: block;
+}
+
+.toggle-switches {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.toggle-switches .email-toggle,
+.toggle-switches .profile-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings-buttons {
+  text-align: center;
+}
+
+button {
+  width: 45%;
+  display: inline;
+}
+
+/* ============================================= */
 /*              Navigation                       */
 /* ============================================= */
 /* ============================================= */
@@ -1049,6 +1180,15 @@ main {
   border-left: 3px solid white;
   padding-left: 5px;
   padding-top: 5px;
+}
+
+.profile-img {
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75px;
+  max-height: 75px;
+  border-radius: 50%;
 }
 
 .img-frame {
