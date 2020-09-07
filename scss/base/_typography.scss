@@ -8,6 +8,7 @@
 
 h1 {
 	@include app-name;
+	color: $white;
 
 	span {
 		font-style: italic;

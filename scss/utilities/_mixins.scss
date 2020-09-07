@@ -20,7 +20,7 @@
 	font-style: italic;
 	margin-left: 20px;
 	padding-left: 20px;
-	border-left: 8px solid $accent-color;
+	border-left: 8px solid;
 	border-radius: 5px;
 }
 
@@ -40,7 +40,7 @@
 	margin: 10px auto 0;
 	border: none;
 	padding: 10px;
-	border-bottom: 5px solid $accent-color;
+	border-bottom: 5px solid;
 }
 
 @mixin screen-reader-only {
@@ -85,7 +85,6 @@
 	margin-top: 10px;
 	max-width: $width;
 	padding: 13px;
-	border: 1px solid $grey-light;
 }
 
 @mixin nav-link-style ($width) {
@@ -95,4 +94,10 @@
 	display: block;
 	width: $width;
 	transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+@mixin grid-layout($rows, $columns) {
+	display: grid;
+	grid-template-columns: ($columns);
+	grid-template-rows: ($rows);
 }
