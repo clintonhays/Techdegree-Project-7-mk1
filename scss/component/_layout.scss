@@ -62,7 +62,7 @@ main {
 .search-alert-grid {
 	@include grid-layout(repeat(3, 1fr), 1fr);
 	grid-template-areas: 'dashboard' 'search' 'alert';
-	@include border-bottom-320;
+	@include border-bottom;
 	padding-bottom: 10px;
 }
 
@@ -92,7 +92,7 @@ main {
 .traffic {
 	@include grid-layout(1fr 1.5fr, 1fr);
 	grid-template-areas: 'title-traffic' 'chart-traffic';
-	@include border-bottom-320;
+	@include border-bottom;
 	padding-bottom: 20px;
 }
 
@@ -126,7 +126,7 @@ main {
 	@include grid-layout(.25fr 1fr, 1fr);
 	grid-template-areas: 'title-mobile' 'muchart';
 	padding-bottom: 20px;
-	@include border-bottom-320;
+	@include border-bottom;
 }
 
 //						            //
@@ -137,7 +137,7 @@ main {
 	@include grid-layout(repeat(3, 1fr), 1fr);
 	row-gap: 2em;
 	padding-bottom: 20px;
-	@include border-bottom-320;
+	@include border-bottom;
 }
 
 .twitter,
@@ -173,7 +173,7 @@ main {
 	@include grid-layout(repeat(autofit, 1fr), 1fr);
 	row-gap: 1em;
 	padding-bottom: 20px;
-	@include border-bottom-320;
+	@include border-bottom;
 }
 
 .member-container {
@@ -209,7 +209,7 @@ main {
 }
 
 .message-user {
-	@include border-bottom-320;
+	@include border-bottom;
 }
 
 // Style placeholder text
