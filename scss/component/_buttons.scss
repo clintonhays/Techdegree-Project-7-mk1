@@ -10,7 +10,7 @@
 	justify-content: space-around;
 	width: 90%;
 	margin: 0 auto;
-	box-shadow: 0px 3px 3px rgba(253, 23, 0, 0.2);
+	box-shadow: 3px 3px 3px rgba(253, 23, 0, 0.2);
 
 	p {
 		margin: 0;
@@ -20,6 +20,18 @@
 		padding-right: 20px;
 		padding-top: 5px;
 	}
+}
+
+.button-message {
+	width: 100%;
+}
+
+.button-style {
+	border-radius: 5px;
+	border: none;
+	height: 2em;
+	background-color: #21b6a8;
+	box-shadow: 3px 3px 3px rgba(33, 182, 168, 0.2);
 }
 
 /* ============================================= */
@@ -345,12 +357,12 @@
 	}
 	.switch-ios.switch-light input:checked ~ span a {
 		left: 100%;
-		border-color: #478c5c;
+		border-color: #21b6a8;
 		margin-left: -2em;
 	}
 	.switch-ios.switch-light input:checked ~ span {
-		border-color: #478c5c;
-		box-shadow: inset 0 0 0 30px #478c5c;
+		border-color: #21b6a8;
+		box-shadow: inset 0 0 0 30px #21b6a8;
 	}
 	.switch-ios.switch-light input:checked ~ span span:first-of-type {
 		opacity: 0;
@@ -366,7 +378,7 @@
 		box-shadow: inset rgba(0, 0, 0, 0.1) 0 1px 0;
 	}
 	.switch-ios.switch-toggle a {
-		background-color: #478c5c;
+		background-color: #21b6a8;
 		border: 0.125em solid #d8d9db;
 		border-radius: 1.75em;
 		transition: all 0.12s ease-out;

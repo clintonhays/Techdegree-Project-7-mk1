@@ -170,6 +170,11 @@ main {
 .google {
 	display: flex;
 	align-items: center;
+	background-color: $dark-accent-color;
+	border-radius: 5px;
+	width: 90%;
+	box-shadow: 3px 3px 3px $dark-accent-color-shadow;
+	@include margin-auto-center;
 
 	.social-image {
 		padding-left: 5px;
@@ -193,17 +198,32 @@ main {
 .new-members,
 .recent-activity {
 	@include grid-layout(repeat(autofit, 1fr), 1fr);
-	row-gap: 2em;
+	row-gap: 1em;
 	padding-bottom: 20px;
 	border-bottom: 1px solid $dark-accent-color;
-
-	h3 {
-		text-align: center;
-	}
 }
 
 .member-container {
 	text-align: center;
+	background-color: $dark-accent-color;
+	border-radius: 5px;
+	width: 90%;
+	@include margin-auto-center;
+	padding-top: 16px;
+	box-shadow: 3px 3px 3px $dark-accent-color-shadow;
+
+	.member-text {
+		line-height: 1.25em;
+
+		p {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.recent-activity .member-container {
+	padding-bottom: 16px;
 }
 
 /* ============================================= */
@@ -231,12 +251,6 @@ main {
 		border: none;
 		border-radius: 5px;
 		resize: none;
-	}
-
-	.button-primary {
-		width: 100%;
-		display: block;
-		margin: 0 auto;
 	}
 }
 
