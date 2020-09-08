@@ -8,17 +8,13 @@
 	background: $alert;
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	width: 90%;
 	margin: 0 auto;
 	box-shadow: 3px 3px 3px rgba(253, 23, 0, 0.2);
 
 	p {
 		margin: 0;
-	}
-
-	.alert-banner-close {
-		padding-right: 20px;
-		padding-top: 5px;
 	}
 }
 

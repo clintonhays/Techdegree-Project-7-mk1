@@ -2,7 +2,26 @@
 // - - - - - Media Queries - - - - - //
 //									 //
 
-@media (min-width: 768px) {
+@media (min-width: $sm) {
+	.header-grid {
+		@include grid-layout(auto, 7fr 1.5fr 1.5fr 2.5fr);
+
+		.username {
+			display: initial;
+			text-align: right;
+			font-size: 1.25em;
+			margin: auto;
+			padding-right: 5px;
+			color: $white;
+		}
+	}
+
+	.social-text {
+		text-align: center;
+	}
+}
+
+@media (min-width: $med) {
 	.grid-container {
 		grid-template-columns: auto;
 		grid-template-rows: auto;

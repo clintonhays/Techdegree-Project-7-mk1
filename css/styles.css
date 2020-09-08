@@ -406,6 +406,7 @@ h1 span {
   background: #fd1700;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 90%;
   margin: 0 auto;
   box-shadow: 3px 3px 3px rgba(253, 23, 0, 0.2);
@@ -413,11 +414,6 @@ h1 span {
 
 .alert-banner p {
   margin: 0;
-}
-
-.alert-banner .alert-banner-close {
-  padding-right: 20px;
-  padding-top: 5px;
 }
 
 .button-message {
@@ -797,6 +793,7 @@ h1 span {
   width: 100%;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 
 .main-header-search .top-search {
@@ -875,10 +872,6 @@ main {
 
 .header-grid .username {
   display: none;
-  text-align: right;
-  font-size: 1.25em;
-  margin: auto;
-  padding-right: 5px;
 }
 
 .main-header h2 {
@@ -1124,7 +1117,7 @@ button {
   max-width: 50px;
   max-height: 50px;
   border-left: 1px solid #b1d8b7;
-  padding-left: 5px;
+  padding-left: 15px;
   padding-top: 5px;
 }
 
@@ -1155,6 +1148,25 @@ button {
 .social-icon {
   width: 50%;
   height: 50%;
+}
+
+@media (min-width: 500px) {
+  .header-grid {
+    display: grid;
+    grid-template-columns: 7fr 1.5fr 1.5fr 2.5fr;
+    grid-template-rows: auto;
+  }
+  .header-grid .username {
+    display: initial;
+    text-align: right;
+    font-size: 1.25em;
+    margin: auto;
+    padding-right: 5px;
+    color: #fff;
+  }
+  .social-text {
+    text-align: center;
+  }
 }
 
 @media (min-width: 768px) {
