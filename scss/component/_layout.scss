@@ -61,7 +61,7 @@ main {
 
 .search-alert-grid {
 	@include grid-layout(repeat(3, 1fr), 1fr);
-	grid-template-areas: 'dashboard' 'search' 'alert';
+	grid-template-areas: 'title' 'search' 'alert';
 	@include border-bottom;
 	padding-bottom: 10px;
 }
@@ -87,6 +87,7 @@ main {
 
 .canvas-container-full {
 	grid-area: chart-traffic;
+	@include margin-auto-center;
 }
 
 .traffic {
@@ -106,6 +107,7 @@ main {
 
 .daily-traffic-chart {
 	grid-area: dtchart;
+	@include margin-auto-center;
 }
 
 .daily-traffic {
@@ -120,6 +122,7 @@ main {
 
 .mobile-users-chart {
 	grid-area: muchart;
+	@include margin-auto-center;
 }
 
 .mobile-users {
@@ -159,8 +162,16 @@ main {
 		margin: 0;
 	}
 
-	.social-text p {
-		display: inline-block;
+	.social-text {
+		p:first-child {
+			display: block;
+			margin-bottom: 0;
+		}
+		p:last-child {
+			font-size: 2em;
+			margin-top: 0;
+			margin-bottom: 16px;
+		}
 	}
 }
 

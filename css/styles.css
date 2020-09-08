@@ -402,10 +402,10 @@ h1 span {
 /* ============================================= */
 .alert-banner {
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 10px 5px;
   background: #fd1700;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 90%;
   margin: 0 auto;
@@ -414,6 +414,10 @@ h1 span {
 
 .alert-banner p {
   margin: 0;
+}
+
+.alert-banner .alert-banner-close {
+  font-weight: bold;
 }
 
 .button-message {
@@ -790,9 +794,9 @@ h1 span {
 
 .main-header-search {
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
+  width: 100%;
   padding-bottom: 20px;
 }
 
@@ -812,6 +816,10 @@ h1 span {
 form {
   width: 100%;
   margin: 0 auto;
+}
+
+.form-field {
+  height: 1.5em;
 }
 
 .form-field,
@@ -890,7 +898,7 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: 'dashboard' 'search' 'alert';
+  grid-template-areas: 'title' 'search' 'alert';
   border-bottom: 1px solid #478c5c;
   padding-bottom: 10px;
 }
@@ -912,6 +920,8 @@ main {
 
 .canvas-container-full {
   grid-area: chart-traffic;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .traffic {
@@ -929,6 +939,8 @@ main {
 
 .daily-traffic-chart {
   grid-area: dtchart;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .daily-traffic {
@@ -945,6 +957,8 @@ main {
 
 .mobile-users-chart {
   grid-area: muchart;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .mobile-users {
@@ -994,10 +1008,19 @@ main {
   margin: 0;
 }
 
-.twitter .social-text p,
-.facebook .social-text p,
-.google .social-text p {
-  display: inline-block;
+.twitter .social-text p:first-child,
+.facebook .social-text p:first-child,
+.google .social-text p:first-child {
+  display: block;
+  margin-bottom: 0;
+}
+
+.twitter .social-text p:last-child,
+.facebook .social-text p:last-child,
+.google .social-text p:last-child {
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .new-members,
@@ -1219,13 +1242,13 @@ button {
   .social-stats .social-container .twitter,
   .social-stats .social-container .facebook,
   .social-stats .social-container .google {
-    width: 25%;
+    width: 30%;
   }
   .social-stats .social-container .twitter .social-icon,
   .social-stats .social-container .facebook .social-icon,
   .social-stats .social-container .google .social-icon {
-    width: 100%;
-    height: 100%;
+    width: 75%;
+    height: 75%;
   }
   .social-stats .social-container .twitter .social-text,
   .social-stats .social-container .facebook .social-text,
@@ -1284,6 +1307,134 @@ button {
   .message-settings .settings h3 {
     text-align: left;
     margin-left: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-grid {
+    display: grid;
+    grid-template-columns: 8fr 1fr 0.75fr 0.5fr;
+    grid-template-rows: auto;
+  }
+  .header-grid div {
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .header-grid .img-avatar {
+    margin: 0;
+  }
+  .header-grid .username {
+    margin-left: 0;
+  }
+  .search-alert-grid {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'title search' 'alert alert';
+  }
+  .search-alert-grid h2 {
+    margin-left: 15px;
+  }
+  .search-alert-grid .main-header-search {
+    padding-top: 20px;
+    width: 50%;
+    padding-left: 50%;
+    background-color: #b1d8b7;
+    border-radius: 0px 0px 0px 5px;
+  }
+  .search-alert-grid .main-header-search .top-search {
+    background-color: #b1d8b7;
+    border-bottom: 2px solid #478c5c;
+  }
+  .search-alert-grid .alert {
+    padding-top: 20px;
+  }
+  .traffic-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+  .traffic-header h3 {
+    text-align: left;
+    margin-left: 15px;
+  }
+  .social-stats .social-container .twitter,
+  .social-stats .social-container .facebook,
+  .social-stats .social-container .google {
+    width: 30%;
+  }
+  .social-stats .social-container .twitter .social-icon,
+  .social-stats .social-container .facebook .social-icon,
+  .social-stats .social-container .google .social-icon {
+    width: 75%;
+    height: 75%;
+  }
+  .new-members .member-container {
+    background-color: initial;
+    border-radius: initial;
+    width: initial;
+    box-shadow: initial;
+    display: grid;
+    grid-template-columns: 60px repeat(2, 1fr);
+    grid-template-rows: auto;
+    width: 90%;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: 1px solid #478c5c;
+  }
+  .new-members .member-container .member-text {
+    text-align: left;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .new-members .member-container .profile-img {
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    margin-left: initial;
+    margin-right: initial;
+    padding-top: 10px;
+    padding-bottom: 16px;
+  }
+  .new-members .member-container p:first-child {
+    text-align: left;
+  }
+  .new-members .member-container p:last-child {
+    text-align: right;
+  }
+  .recent-activity .member-container {
+    background-color: initial;
+    border-radius: initial;
+    width: initial;
+    box-shadow: initial;
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: auto;
+    width: 90%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0;
+    border-bottom: 1px solid #478c5c;
+  }
+  .recent-activity .member-container .member-text {
+    text-align: left;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .recent-activity .member-container .profile-img {
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    margin-left: initial;
+    margin-right: initial;
+    padding-top: 10px;
+    padding-bottom: 16px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

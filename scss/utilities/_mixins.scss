@@ -78,8 +78,20 @@
 	max-height: 75px;
 }
 
-@mixin profile-img {
+@mixin avatar-style-sm {
+	display: inline-block;
+	@include margin-auto-center;
+	max-width: 50px;
+	max-height: 50px;
+}
+
+@mixin profile-img-med {
 	@include avatar-style-med;
+	@include round;
+}
+
+@mixin profile-img-sm {
+	@include avatar-style-sm;
 	@include round;
 }
 

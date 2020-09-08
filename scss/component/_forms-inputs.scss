@@ -4,9 +4,9 @@
 
 .main-header-search {
 	display: flex;
-	width: 100%;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 	padding-bottom: 20px;
 
 	.top-search {
@@ -30,6 +30,10 @@
 form {
 	width: 100%;
 	margin: 0 auto;
+}
+
+.form-field {
+	height: 1.5em;
 }
 
 .form-field,
