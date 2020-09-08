@@ -15,9 +15,9 @@
 		box-shadow: none;
 		border-style: none;
 		border-bottom: 2px solid $light-accent-color;
-	}
 
-	&:focus {
-		outline-color: $light-accent-color;
+		&:focus {
+			outline-color: $light-accent-color;
+		}
 	}
 }
