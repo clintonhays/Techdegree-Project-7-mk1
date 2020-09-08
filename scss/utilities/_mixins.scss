@@ -1,3 +1,7 @@
+//						      //
+// - - - - - Mixins - - - - - //
+//						      //
+
 @mixin margin-auto-center {
 	margin-right: auto;
 	margin-left: auto;
@@ -105,4 +109,14 @@
 @mixin header($font, $alignment) {
 	font-family: $font;
 	text-align: $alignment;
+}
+
+@mixin border-bottom-320 {
+	border-bottom: 1px solid $dark-accent-color;
+}
+
+@mixin card-layout ($color, $radius, $width) {
+	background-color: $color;
+	border-radius: $radius;
+	width: $width;
 }

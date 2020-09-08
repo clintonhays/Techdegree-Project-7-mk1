@@ -1,10 +1,6 @@
-/* ============================================= */
-/*              Grid System                      */
-/* ============================================= */
-
-/* ============================================= */
-/*            	 Body Grid                       */
-/* ============================================= */
+//				            //
+// - - - - - Body - - - - - //
+//							//
 
 header {
 	grid-area: head;
@@ -24,9 +20,9 @@ main {
 	background-color: $background-color;
 }
 
-/* ============================================= */
-/*            	 Header Grid                     */
-/* ============================================= */
+//						      //
+// - - - - - Header - - - - - //
+//							  //
 
 .header-grid {
 	@include grid-layout(auto, 7fr 1fr 1.5fr);
@@ -51,17 +47,9 @@ main {
 	}
 }
 
-/* ============================================= */
-/*               Main Grid                       */
-/* ============================================= */
-
-// main {
-// 	display: grid;
-// }
-
-/* ============================================= */
-/*               Search-Alert Grid               */
-/* ============================================= */
+//						             //
+// - - - - - Search/Alerts - - - - - //
+//									 //
 
 .main-header h2 {
 	grid-area: title;
@@ -78,13 +66,13 @@ main {
 .search-alert-grid {
 	@include grid-layout(repeat(3, 1fr), 1fr);
 	grid-template-areas: 'dashboard' 'search' 'alert';
-	border-bottom: 1px solid $dark-accent-color;
+	@include border-bottom-320;
 	padding-bottom: 10px;
 }
 
-/* ============================================= */
-/*               Traffic Grid                    */
-/* ============================================= */
+//						       //
+// - - - - - Traffic - - - - - //
+//							   //
 
 .traffic-header {
 	grid-area: title-traffic;
@@ -108,13 +96,13 @@ main {
 .traffic {
 	@include grid-layout(1fr 1.5fr, 1fr);
 	grid-template-areas: 'title-traffic' 'chart-traffic';
+	@include border-bottom-320;
 	padding-bottom: 20px;
-	border-bottom: 1px solid $dark-accent-color;
 }
 
-/* ============================================= */
-/*               Daily-Mobile Grid               */
-/* ============================================= */
+//						            			  //
+// - - - - - Daily Traffic/Mobile Users - - - - - //
+//												  //
 
 .daily-traffic h3 {
 	grid-area: title-daily;
@@ -142,18 +130,18 @@ main {
 	@include grid-layout(.25fr 1fr, 1fr);
 	grid-template-areas: 'title-mobile' 'muchart';
 	padding-bottom: 20px;
-	border-bottom: 1px solid $dark-accent-color;
+	@include border-bottom-320;
 }
 
-/* ============================================= */
-/*               Social Stats Grid               */
-/* ============================================= */
+//						            //
+// - - - - - Social Stats - - - - - //
+//									//
 
 .social-container {
 	@include grid-layout(repeat(3, 1fr), 1fr);
 	row-gap: 2em;
 	padding-bottom: 20px;
-	border-bottom: 1px solid $dark-accent-color;
+	@include border-bottom-320;
 }
 
 .twitter,
@@ -161,9 +149,7 @@ main {
 .google {
 	display: flex;
 	align-items: center;
-	background-color: $dark-accent-color;
-	border-radius: 5px;
-	width: 90%;
+	@include card-layout($dark-accent-color, 5px, 90%);
 	box-shadow: 3px 3px 3px $dark-accent-color-shadow;
 	@include margin-auto-center;
 
@@ -182,23 +168,21 @@ main {
 	}
 }
 
-/* ============================================= */
-/*       New Members/Recent Activity Grid        */
-/* ============================================= */
+//									  			   //
+// - - - - - New Members/Recent Activity - - - - - //
+//									               //
 
 .new-members,
 .recent-activity {
 	@include grid-layout(repeat(autofit, 1fr), 1fr);
 	row-gap: 1em;
 	padding-bottom: 20px;
-	border-bottom: 1px solid $dark-accent-color;
+	@include border-bottom-320;
 }
 
 .member-container {
 	text-align: center;
-	background-color: $dark-accent-color;
-	border-radius: 5px;
-	width: 90%;
+	@include card-layout($dark-accent-color, 5px, 90%);
 	@include margin-auto-center;
 	padding-top: 16px;
 	box-shadow: 3px 3px 3px $dark-accent-color-shadow;
@@ -217,34 +201,19 @@ main {
 	padding-bottom: 16px;
 }
 
-/* ============================================= */
-/*               Message User Grid               */
-/* ============================================= */
+//										 //
+// - - - - - Message/Settings  - - - - - //
+//										 //
+
+.message-user,
+.settings {
+	@include grid-layout(repeat(autofit, 1fr), 1fr);
+	row-gap: 2em;
+	padding-bottom: 20px;
+}
 
 .message-user {
-	@include grid-layout(repeat(autofit, 1fr), 1fr);
-	grid-auto-columns: 0;
-	overflow-x: hidden;
-	row-gap: 2em;
-	border-bottom: 1px solid $dark-accent-color;
-	padding-bottom: 20px;
-
-	form {
-		width: 100%;
-		margin: 0 auto;
-	}
-
-	.form-field,
-	.form-area {
-		display: block;
-		width: 90%;
-		@include margin-auto-center;
-		margin-bottom: 1em;
-		padding: 0;
-		border: none;
-		border-radius: 5px;
-		resize: none;
-	}
+	@include border-bottom-320;
 }
 
 // Style placeholder text
@@ -252,17 +221,7 @@ main {
 	padding-left: 10px;
 }
 
-/* ============================================= */
-/*               Settings Grid                   */
-/* ============================================= */
-
 .settings {
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(autofit, 1fr);
-	row-gap: 2em;
-	padding-bottom: 20px;
-
 	#timezone {
 		width: 95%;
 		margin: 0 auto;
@@ -283,6 +242,10 @@ main {
 		display: block;
 	}
 }
+
+//									  //
+// - - - - - Toggle Buttons - - - - - //
+//									  //
 
 .toggle-switches {
 	display: grid;

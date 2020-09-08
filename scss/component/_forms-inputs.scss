@@ -1,6 +1,6 @@
-/* ============================================= */
-/*              Forms                            */
-/* ============================================= */
+//                            //
+// - - - - - Inputs - - - - - //
+//                            //
 
 .main-header-search {
 	display: flex;
@@ -20,4 +20,25 @@
 			outline-color: $light-accent-color;
 		}
 	}
+}
+
+//                           //
+// - - - - - Forms - - - - - //
+//                           //
+
+form {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.form-field,
+.form-area {
+	display: block;
+	width: 90%;
+	@include margin-auto-center;
+	margin-bottom: 1em;
+	padding: 0;
+	border: none;
+	border-radius: 5px;
+	resize: none;
 }
