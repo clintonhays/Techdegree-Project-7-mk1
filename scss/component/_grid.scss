@@ -88,11 +88,6 @@ main {
 
 .traffic-header {
 	grid-area: title-traffic;
-
-	h3 {
-		text-align: center;
-		margin-top: 10px;
-	}
 }
 
 .traffic-header ul {
@@ -123,8 +118,6 @@ main {
 
 .daily-traffic h3 {
 	grid-area: title-daily;
-	margin: 0;
-	text-align: center;
 }
 
 .daily-traffic-chart {
@@ -139,8 +132,6 @@ main {
 
 .mobile-users h3 {
 	grid-area: title-mobile;
-	margin: 0;
-	text-align: center;
 }
 
 .mobile-users-chart {
@@ -235,17 +226,19 @@ main {
 	grid-auto-columns: 0;
 	overflow-x: hidden;
 	row-gap: 2em;
-	width: 90%;
-	margin: 0 auto;
+	border-bottom: 1px solid $dark-accent-color;
 	padding-bottom: 20px;
 
-	h3 {
-		text-align: center;
+	form {
+		width: 100%;
+		margin: 0 auto;
 	}
 
 	.form-field,
 	.form-area {
-		width: 100%;
+		display: block;
+		width: 90%;
+		@include margin-auto-center;
 		margin-bottom: 1em;
 		padding: 0;
 		border: none;
@@ -269,11 +262,6 @@ main {
 	grid-template-rows: repeat(autofit, 1fr);
 	row-gap: 2em;
 	padding-bottom: 20px;
-
-	h3 {
-		text-align: center;
-		margin-bottom: 0;
-	}
 
 	#timezone {
 		width: 95%;

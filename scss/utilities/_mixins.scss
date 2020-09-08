@@ -9,7 +9,7 @@
 
 @mixin app-name {
 	display: inline-block;
-	font-family: sans-serif;
+	font-family: 'Palanquin', sans-serif;
 	font-weight: 100;
 	font-size: 1.5em;
 }
@@ -100,4 +100,9 @@
 	display: grid;
 	grid-template-columns: ($columns);
 	grid-template-rows: ($rows);
+}
+
+@mixin header($font, $alignment) {
+	font-family: $font;
+	text-align: $alignment;
 }

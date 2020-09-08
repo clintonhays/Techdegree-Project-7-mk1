@@ -23,7 +23,9 @@
 }
 
 .button-message {
-	width: 100%;
+	display: block;
+	width: 90%;
+	@include margin-auto-center;
 }
 
 .button-style {
