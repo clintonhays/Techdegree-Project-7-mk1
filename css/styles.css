@@ -2,6 +2,21 @@
 /* ============================================= */
 /*             Sub-Folder Imports                */
 /* ============================================= */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -418,6 +433,10 @@ h1 span {
 
 .alert-banner .alert-banner-close {
   font-weight: bold;
+}
+
+.header-grid svg {
+  fill: white;
 }
 
 .button-message {
@@ -869,7 +888,6 @@ main {
 }
 
 .header-grid div {
-  margin-right: auto;
   margin-left: auto;
 }
 
@@ -1239,6 +1257,9 @@ button {
     padding-right: 5px;
     color: #fff;
   }
+  #notification {
+    right: 195px;
+  }
   .nav-container .nav-bar .menu {
     display: grid;
     grid-template-columns: 30px 400px;
@@ -1255,6 +1276,15 @@ button {
     grid-template-columns: 55px;
     grid-template-rows: 1fr;
     grid-template-areas: "head head" "navi main";
+  }
+  .header-grid div {
+    margin-right: 0;
+  }
+  .header-grid div svg {
+    padding-right: 0;
+  }
+  .header-grid #notification {
+    right: 252px;
   }
   .nav-container {
     background-color: #b1d8b7;
@@ -1396,8 +1426,11 @@ button {
     grid-template-rows: auto;
   }
   .header-grid div {
-    margin-right: 0;
+    margin-right: 10px;
     margin-left: auto;
+  }
+  .header-grid #notification {
+    right: 152px;
   }
   .header-grid .img-avatar {
     margin: 0;

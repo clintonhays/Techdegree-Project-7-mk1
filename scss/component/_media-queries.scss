@@ -16,6 +16,10 @@
 		}
 	}
 
+	#notification {
+		right: 195px;
+	}
+
 	.nav-container {
 		.nav-bar {
 			.menu {
@@ -33,6 +37,19 @@
 	.grid-container {
 		@include grid-layout(1fr, 55px);
 		grid-template-areas: "head head" "navi main";
+	}
+
+	.header-grid {
+		div {
+			margin-right: 0;
+
+			svg {
+				padding-right: 0;
+			}
+		}
+		#notification {
+			right: 252px;
+		}
 	}
 
 	.nav-container {
@@ -194,8 +211,12 @@
 		@include grid-layout(auto, 8fr 1fr .75fr .5fr);
 
 		div {
-			margin-right: 0;
+			margin-right: 10px;
 			margin-left: auto;
+		}
+
+		#notification {
+			right: 152px;
 		}
 
 		.img-avatar {
