@@ -16,6 +16,14 @@
 		}
 	}
 
+	.nav-container {
+		.nav-bar {
+			.menu {
+				@include grid-layout(minmax(30px, 1fr), 30px 400px);
+			}
+		}
+	}
+
 	.social-text {
 		text-align: center;
 	}
@@ -28,11 +36,40 @@
 	}
 
 	.nav-container {
-		flex-direction: column;
-		justify-content: start;
+		background-color: $light-accent-color;
 
-		a {
-			margin: 25px 10px;
+		.nav-bar {
+			border-bottom: none;
+			padding-left: 0;
+
+			.menu {
+				@include grid-layout(30px 250px, 55px);
+
+				.arrow {
+					width: 50%;
+					margin: 0 auto;
+					line-height: 1.44em;
+				}
+
+				&:hover {
+					.arrow {
+						transform: translateX(0px) rotate(90deg);
+					}
+
+					.dropdown {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						padding-left: 0;
+					}
+
+					.dropdown {
+						li {
+							margin-left: 12px;
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -215,6 +252,11 @@
 				.social-icon {
 					width: 75%;
 					height: 75%;
+				}
+
+				.social-image,
+				.social-text {
+					width: 40%;
 				}
 			}
 		}
