@@ -22,11 +22,40 @@
 	}
 }
 
-.header-grid {
-	svg {
-		fill: white;
-		// animation: pulse 1s infinite;
-		// fill: red;
+//                                   //
+// - - - - - Notifications - - - - - //
+//                                   //
+
+.notifications-container {
+	z-index: 2;
+	margin: 0;
+
+	.notification-messages {
+		margin: 0;
+		list-style-type: none;
+
+		#messages {
+			padding: 0;
+
+			#notification {
+				display: inline-block;
+			}
+
+			#notificationList {
+				display: none;
+				width: 100%;
+				list-style-type: none;
+				padding-left: 15px;
+			}
+
+			&:hover {
+				#notificationList {
+					background-color: dodgerblue;
+					display: flex;
+					flex-direction: column;
+				}
+			}
+		}
 	}
 }
 

@@ -1,3 +1,15 @@
+//						                 //
+// - - - - - Notification Bell - - - - - //
+// 							             //
+
+const notificationBell = document.getElementById('notification');
+
+notificationBell.style.fill = 'red';
+
+//						            //
+// - - - - - Alert Banner - - - - - //
+// 							        //
+
 const alertBanner = document.getElementById('alert');
 
 alertBanner.innerHTML = `

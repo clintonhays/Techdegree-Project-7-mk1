@@ -40,15 +40,10 @@
 	}
 
 	.header-grid {
-		div {
-			margin-right: 0;
+		@include grid-layout(auto, 8fr 1fr .75fr .5fr);
 
-			svg {
-				padding-right: 0;
-			}
-		}
-		#notification {
-			right: 252px;
+		.notifications-container {
+			text-align: right;
 		}
 	}
 
@@ -209,11 +204,6 @@
 @media (min-width: $lg) {
 	.header-grid {
 		@include grid-layout(auto, 8fr 1fr .75fr .5fr);
-
-		div {
-			margin-right: 10px;
-			margin-left: auto;
-		}
 
 		#notification {
 			right: 152px;

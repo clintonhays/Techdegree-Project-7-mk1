@@ -435,8 +435,35 @@ h1 span {
   font-weight: bold;
 }
 
-.header-grid svg {
-  fill: white;
+.notifications-container {
+  z-index: 2;
+  margin: 0;
+}
+
+.notifications-container .notification-messages {
+  margin: 0;
+  list-style-type: none;
+}
+
+.notifications-container .notification-messages #messages {
+  padding: 0;
+}
+
+.notifications-container .notification-messages #messages #notification {
+  display: inline-block;
+}
+
+.notifications-container .notification-messages #messages #notificationList {
+  display: none;
+  width: 100%;
+  list-style-type: none;
+  padding-left: 15px;
+}
+
+.notifications-container .notification-messages #messages:hover #notificationList {
+  background-color: dodgerblue;
+  display: flex;
+  flex-direction: column;
 }
 
 .button-message {
@@ -888,7 +915,7 @@ main {
 }
 
 .header-grid div {
-  margin-left: auto;
+  margin: 0;
 }
 
 .header-grid div svg {
@@ -1277,14 +1304,13 @@ button {
     grid-template-rows: 1fr;
     grid-template-areas: "head head" "navi main";
   }
-  .header-grid div {
-    margin-right: 0;
+  .header-grid {
+    display: grid;
+    grid-template-columns: 8fr 1fr 0.75fr 0.5fr;
+    grid-template-rows: auto;
   }
-  .header-grid div svg {
-    padding-right: 0;
-  }
-  .header-grid #notification {
-    right: 252px;
+  .header-grid .notifications-container {
+    text-align: right;
   }
   .nav-container {
     background-color: #b1d8b7;
@@ -1424,10 +1450,6 @@ button {
     display: grid;
     grid-template-columns: 8fr 1fr 0.75fr 0.5fr;
     grid-template-rows: auto;
-  }
-  .header-grid div {
-    margin-right: 10px;
-    margin-left: auto;
   }
   .header-grid #notification {
     right: 152px;
