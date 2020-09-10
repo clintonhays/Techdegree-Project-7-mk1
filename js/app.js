@@ -21,66 +21,303 @@ alertBanner.addEventListener('click', (e) => {
 
 let trafficChart = document.getElementById('trafficChart').getContext('2d');
 
-let massPopChart = new Chart(trafficChart, {
+Chart.defaults.global.defaultFontColor = 'darkgray';
+
+let hourlyTrafficChart = new Chart(trafficChart, {
 	type    : 'line',
 	data    : {
 		labels   : [
-			'Boston',
-			'Worcester',
-			'Springfield',
-			'Lowell',
-			'Cambridge',
-			'New Bedford'
+			'01-04',
+			'05-08',
+			'09-12',
+			'13-16',
+			'17-20',
+			'21-24'
 		],
 		datasets : [
 			{
-				label : 'Population',
-				data  : [
-					600000,
-					180000,
-					150000,
-					106000,
-					105000,
-					95000
-				]
+				data            : [
+					50,
+					100,
+					200,
+					600,
+					900,
+					175
+				],
+				backgroundColor : 'rgba(33, 182, 168, 0.2)',
+				borderColor     : 'rgb(33, 182, 168)'
 			}
 		]
 	},
-	options : {}
+	options : {
+		legend : false,
+		scales : {
+			yAxes : [
+				{
+					display   : true,
+					gridLines : {
+						color : 'lightgray'
+					},
+					ticks     : {
+						suggestedMin  : 0,
+						suggestedMax  : 1000,
+						maxTicksLimit : 6
+					}
+				}
+			],
+			xAxes : [
+				{
+					display   : true,
+					gridLines : {
+						color : 'lightgray'
+					}
+				}
+			]
+		}
+	}
+});
+
+let dailyTrafficChart = new Chart(trafficChart, {
+	type    : 'line',
+	data    : {
+		labels   : [
+			'Mon',
+			'Tue',
+			'Wed',
+			'Thu',
+			'Fri',
+			'Sat'
+		],
+		datasets : [
+			{
+				data            : [
+					1200,
+					1050,
+					1250,
+					1800,
+					1600,
+					1200,
+					1000
+				],
+				backgroundColor : 'rgba(33, 182, 168, 0.2)',
+				borderColor     : 'rgb(33, 182, 168)'
+			}
+		]
+	},
+	options : {
+		legend : false,
+		scales : {
+			yAxes : [
+				{
+					display   : true,
+					gridLines : {
+						color : 'lightgray'
+					},
+					ticks     : {
+						suggestedMin  : 0,
+						suggestedMax  : 200,
+						maxTicksLimit : 6
+					}
+				}
+			],
+			xAxes : [
+				{
+					display   : true,
+					gridLines : {
+						color : 'lightgray'
+					}
+				}
+			]
+		}
+	}
+});
+
+let weeklyTrafficChart = new Chart(trafficChart, {
+	type    : 'line',
+	data    : {
+		labels   : [
+			'09/01-09/07',
+			'09/08-09/014',
+			'09/15-09/021',
+			'09/22-09/28'
+		],
+		datasets : [
+			{
+				data            : [
+					7000,
+					6700,
+					8200,
+					9000
+				],
+				backgroundColor : 'rgba(33, 182, 168, 0.2)',
+				borderColor     : 'rgb(33, 182, 168)'
+			}
+		]
+	},
+	options : {
+		legend : false,
+		scales : {
+			yAxes : [
+				{
+					display   : true,
+					gridLines : {
+						color : 'lightgray'
+					},
+					ticks     : {
+						suggestedMin  : 0,
+						suggestedMax  : 10000,
+						maxTicksLimit : 6
+					}
+				}
+			],
+			xAxes : [
+				{
+					display   : true,
+					gridLines : {
+						color : 'lightgray'
+					}
+				}
+			]
+		}
+	}
+});
+
+let monthlyTrafficChart = new Chart(trafficChart, {
+	type    : 'line',
+	data    : {
+		labels   : [
+			'Jul',
+			'Aug',
+			'Sep',
+			'Oct',
+			'Nov',
+			'Dec'
+		],
+		datasets : [
+			{
+				data            : [
+					31000,
+					30000,
+					28000,
+					32000,
+					54000,
+					48000
+				],
+				backgroundColor : 'rgba(33, 182, 168, 0.2)',
+				borderColor     : 'rgb(33, 182, 168)'
+			}
+		]
+	},
+	options : {
+		legend : false,
+		scales : {
+			yAxes : [
+				{
+					display   : true,
+					gridLines : {
+						color : 'lightgray'
+					},
+					ticks     : {
+						suggestedMin  : 0,
+						suggestedMax  : 10000,
+						maxTicksLimit : 8
+					}
+				}
+			],
+			xAxes : [
+				{
+					display   : true,
+					gridLines : {
+						color : 'lightgray'
+					}
+				}
+			]
+		}
+	}
 });
 
 //							      //
 // - - - - - Bar Chart - - - - - //
 // 							      //
 
-let dailyTrafficChart = document.getElementById('dailyChart').getContext('2d');
+let dailyUserTrafficChart = document.getElementById('dailyUserChart').getContext('2d');
 
-let massPopChart2 = new Chart(dailyTrafficChart, {
+let dailyUsers = new Chart(dailyUserTrafficChart, {
 	type    : 'bar',
 	data    : {
 		labels   : [
-			'Boston',
-			'Worcester',
-			'Springfield',
-			'Lowell',
-			'Cambridge',
-			'New Bedford'
+			'Mon',
+			'Tue',
+			'Wed',
+			'Thu',
+			'Fri',
+			'Sat'
 		],
 		datasets : [
 			{
-				label : 'Population',
-				data  : [
-					600000,
-					180000,
-					150000,
-					106000,
-					105000,
-					95000
+				data                 : [
+					1200,
+					1050,
+					1250,
+					1800,
+					1600,
+					1200,
+					1000
+				],
+				backgroundColor      : [
+					'#18A558',
+					'#A3EBB1',
+					'#21B6A8',
+					'#116530',
+					'#1C9B8E',
+					'#53DFD1'
+				],
+				hoverBorderWidth     : 2,
+				hoverBorderColor     : [
+					'#007225',
+					'#3D854B',
+					'#008375',
+					'#008375',
+					'#008375',
+					'#20AC9E'
+				],
+				hoverBackgroundColor : [
+					'#4BD88B',
+					'#D6FFE4',
+					'#54E9DB',
+					'#449863',
+					'#4FCEC1',
+					'#B9FFFF'
 				]
 			}
 		]
 	},
-	options : {}
+	options : {
+		legend : false,
+		scales : {
+			yAxes : [
+				{
+					display   : true,
+					gridLines : {
+						color : 'lightgray'
+					},
+					ticks     : {
+						suggestedMin  : 0,
+						suggestedMax  : 200,
+						maxTicksLimit : 6
+					}
+				}
+			],
+			xAxes : [
+				{
+					display   : true,
+					gridLines : {
+						color : 'lightgray'
+					}
+				}
+			]
+		}
+	}
 });
 
 //							          //
@@ -93,23 +330,48 @@ let massPopChart3 = new Chart(mobileChart, {
 	type    : 'doughnut',
 	data    : {
 		labels   : [
-			'Boston',
-			'Worcester',
-			'Springfield',
-			'Lowell',
-			'Cambridge',
-			'New Bedford'
+			'Facebook',
+			'Pintrest',
+			'Twitter',
+			'Youtube',
+			'Instagram',
+			'reddit'
 		],
 		datasets : [
 			{
-				label : 'Population',
-				data  : [
-					600000,
-					180000,
-					150000,
-					106000,
-					105000,
-					95000
+				label                : 'Social Media Traffic',
+				data                 : [
+					67.0,
+					19,
+					9.5,
+					2,
+					1,
+					1
+				],
+				backgroundColor      : [
+					'#18A558',
+					'#A3EBB1',
+					'#21B6A8',
+					'#116530',
+					'#1C9B8E',
+					'#53DFD1'
+				],
+				hoverBorderWidth     : 2,
+				hoverBorderColor     : [
+					'#007225',
+					'#3D854B',
+					'#008375',
+					'#008375',
+					'#008375',
+					'#20AC9E'
+				],
+				hoverBackgroundColor : [
+					'#4BD88B',
+					'#D6FFE4',
+					'#54E9DB',
+					'#449863',
+					'#4FCEC1',
+					'#B9FFFF'
 				]
 			}
 		]
