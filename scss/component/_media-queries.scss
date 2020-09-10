@@ -4,7 +4,7 @@
 
 @media (min-width: $sm) {
 	.header-grid {
-		@include grid-layout(auto, 7fr 1.5fr 1.5fr 2.5fr);
+		@include grid-layout(60px, 7fr 1.5fr 1.5fr 2.5fr);
 
 		.username {
 			display: initial;
@@ -40,7 +40,7 @@
 	}
 
 	.header-grid {
-		@include grid-layout(auto, 8fr 1fr .75fr .5fr);
+		@include grid-layout(60px, 8fr 1fr .75fr .5fr);
 
 		.notifications-container {
 			text-align: right;
@@ -203,7 +203,7 @@
 
 @media (min-width: $lg) {
 	.header-grid {
-		@include grid-layout(auto, 8fr 1fr .75fr .5fr);
+		@include grid-layout(60px, 8fr 1fr .75fr .5fr);
 
 		#notification {
 			right: 152px;

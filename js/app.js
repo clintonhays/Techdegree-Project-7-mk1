@@ -1,31 +1,4 @@
-//						                 //
-// - - - - - Notification Bell - - - - - //
-// 							             //
-
-const notificationBell = document.getElementById('notification');
-
-notificationBell.style.fill = 'red';
-
-//						            //
-// - - - - - Alert Banner - - - - - //
-// 							        //
-
-const alertBanner = document.getElementById('alert');
-
-alertBanner.innerHTML = `
-<div class="alert-banner">
-    <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
-    <p class="alert-banner-close">x</p>
-</div>
-
-`;
-
-alertBanner.addEventListener('click', (e) => {
-	const element = e.target;
-	if (element.classList.contains('alert-banner-close')) {
-		alertBanner.style.display = 'none';
-	}
-});
+// - - - - - - - - - - - - - - - - - - - - Charts - - - - - - - - - - - - - - - - - - - - //
 
 //							      //
 // - - - - - Line Chart - - - - - //
@@ -248,9 +221,9 @@ let monthlyTrafficChart = new Chart(trafficChart, {
 	}
 });
 
-//							      //
+//							     //
 // - - - - - Bar Chart - - - - - //
-// 							      //
+// 							     //
 
 let dailyUserTrafficChart = document.getElementById('dailyUserChart').getContext('2d');
 
@@ -390,3 +363,52 @@ let massPopChart3 = new Chart(mobileChart, {
 	},
 	options : {}
 });
+
+// - - - - - - - - - - - - - - - - - - - - End Charts - - - - - - - - - - - - - - - - - - - - //
+
+//						                 //
+// - - - - - Notification Bell - - - - - //
+// 							             //
+
+const notificationBell = document.getElementById('notification');
+const notificationList = document.getElementById('notificationList');
+
+notificationBell.style.fill = 'red';
+
+notificationList.innerHTML = `
+<li><p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
+<p class="alert-banner-close">x</p></li>
+`;
+
+//						            //
+// - - - - - Alert Banner - - - - - //
+// 							        //
+
+const alertBanner = document.getElementById('alert');
+
+alertBanner.innerHTML = `
+<div class="alert-banner">
+    <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
+    <p class="alert-banner-close">x</p>
+</div>
+
+`;
+
+alertBanner.addEventListener('click', (e) => {
+	const element = e.target;
+	if (element.classList.contains('alert-banner-close')) {
+		alertBanner.style.display = 'none';
+	}
+});
+
+//						       //
+// - - - - - Traffic - - - - - //
+// 							   //
+
+const chartDisplay = document.getElementsByClassName('traffic-nav-link');
+
+if (chartDisplay[0].classList.contains('hourly')) {
+}
+else {
+	console.log('wrong index');
+}

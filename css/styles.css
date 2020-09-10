@@ -441,12 +441,13 @@ h1 span {
 }
 
 .notifications-container .notification-messages {
+  padding: 0;
   margin: 0;
   list-style-type: none;
 }
 
 .notifications-container .notification-messages #messages {
-  padding: 0;
+  text-align: right;
 }
 
 .notifications-container .notification-messages #messages #notification {
@@ -457,13 +458,23 @@ h1 span {
   display: none;
   width: 100%;
   list-style-type: none;
-  padding-left: 15px;
+  padding: 0;
 }
 
 .notifications-container .notification-messages #messages:hover #notificationList {
   background-color: dodgerblue;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 200px;
+  grid-template-rows: auto;
+  margin: 0;
+}
+
+.notifications-container .notification-messages #messages:hover #notificationList li {
+  width: 100%;
+}
+
+.notifications-container .notification-messages #messages:hover #notificationList li p {
+  display: block;
 }
 
 .button-message {
@@ -909,7 +920,7 @@ main {
 .header-grid {
   display: grid;
   grid-template-columns: 7fr 1fr 1.5fr;
-  grid-template-rows: auto;
+  grid-template-rows: 60px;
   padding: 5px 10px;
   background-color: #013a20;
 }
@@ -1274,7 +1285,7 @@ button {
   .header-grid {
     display: grid;
     grid-template-columns: 7fr 1.5fr 1.5fr 2.5fr;
-    grid-template-rows: auto;
+    grid-template-rows: 60px;
   }
   .header-grid .username {
     display: initial;
@@ -1307,7 +1318,7 @@ button {
   .header-grid {
     display: grid;
     grid-template-columns: 8fr 1fr 0.75fr 0.5fr;
-    grid-template-rows: auto;
+    grid-template-rows: 60px;
   }
   .header-grid .notifications-container {
     text-align: right;
@@ -1449,7 +1460,7 @@ button {
   .header-grid {
     display: grid;
     grid-template-columns: 8fr 1fr 0.75fr 0.5fr;
-    grid-template-rows: auto;
+    grid-template-rows: 60px;
   }
   .header-grid #notification {
     right: 152px;

@@ -31,12 +31,12 @@
 	margin: 0;
 
 	.notification-messages {
+		padding: 0;
 		margin: 0;
 		list-style-type: none;
 
 		#messages {
-			padding: 0;
-
+			text-align: right;
 			#notification {
 				display: inline-block;
 			}
@@ -45,14 +45,21 @@
 				display: none;
 				width: 100%;
 				list-style-type: none;
-				padding-left: 15px;
+				padding: 0;
 			}
 
 			&:hover {
 				#notificationList {
 					background-color: dodgerblue;
-					display: flex;
-					flex-direction: column;
+					@include grid-layout(auto, 200px);
+					margin: 0;
+
+					li {
+						width: 100%;
+						p {
+							display: block;
+						}
+					}
 				}
 			}
 		}

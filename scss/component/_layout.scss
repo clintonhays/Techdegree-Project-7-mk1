@@ -25,7 +25,7 @@ main {
 //							  //
 
 .header-grid {
-	@include grid-layout(auto, 7fr 1fr 1.5fr);
+	@include grid-layout(60px, 7fr 1fr 1.5fr);
 	padding: 5px 10px;
 	background-color: $brand-color;
 
