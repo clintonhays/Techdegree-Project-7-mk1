@@ -8,216 +8,235 @@ let trafficChart = document.getElementById('trafficChart').getContext('2d');
 
 Chart.defaults.global.defaultFontColor = 'darkgray';
 
-let hourlyTrafficChart = new Chart(trafficChart, {
-	type    : 'line',
-	data    : {
-		labels   : [
-			'01-04',
-			'05-08',
-			'09-12',
-			'13-16',
-			'17-20',
-			'21-24'
-		],
-		datasets : [
-			{
-				data            : [
-					50,
-					100,
-					200,
-					600,
-					900,
-					175
-				],
-				backgroundColor : 'rgba(33, 182, 168, 0.2)',
-				borderColor     : 'rgb(33, 182, 168)'
-			}
-		]
-	},
-	options : {
-		legend : false,
-		scales : {
-			yAxes : [
-				{
-					display   : true,
-					gridLines : {
-						color : 'lightgray'
-					},
-					ticks     : {
-						suggestedMin  : 0,
-						suggestedMax  : 1000,
-						maxTicksLimit : 6
-					}
-				}
-			],
-			xAxes : [
-				{
-					display   : true,
-					gridLines : {
-						color : 'lightgray'
-					}
-				}
-			]
-		}
-	}
-});
+const chartDisplay = document.getElementById('traffic-nav-link');
 
-let dailyTrafficChart = new Chart(trafficChart, {
-	type    : 'line',
-	data    : {
-		labels   : [
-			'Mon',
-			'Tue',
-			'Wed',
-			'Thu',
-			'Fri',
-			'Sat'
-		],
-		datasets : [
-			{
-				data            : [
-					1200,
-					1050,
-					1250,
-					1800,
-					1600,
-					1200,
-					1000
-				],
-				backgroundColor : 'rgba(33, 182, 168, 0.2)',
-				borderColor     : 'rgb(33, 182, 168)'
-			}
-		]
-	},
-	options : {
-		legend : false,
-		scales : {
-			yAxes : [
-				{
-					display   : true,
-					gridLines : {
-						color : 'lightgray'
-					},
-					ticks     : {
-						suggestedMin  : 0,
-						suggestedMax  : 200,
-						maxTicksLimit : 6
-					}
-				}
-			],
-			xAxes : [
-				{
-					display   : true,
-					gridLines : {
-						color : 'lightgray'
-					}
-				}
-			]
-		}
-	}
-});
+chartDisplay.addEventListener('click', (e) => {
+	const target = e.target;
 
-let weeklyTrafficChart = new Chart(trafficChart, {
-	type    : 'line',
-	data    : {
-		labels   : [
-			'09/01-09/07',
-			'09/08-09/014',
-			'09/15-09/021',
-			'09/22-09/28'
-		],
-		datasets : [
-			{
-				data            : [
-					7000,
-					6700,
-					8200,
-					9000
-				],
-				backgroundColor : 'rgba(33, 182, 168, 0.2)',
-				borderColor     : 'rgb(33, 182, 168)'
-			}
-		]
-	},
-	options : {
-		legend : false,
-		scales : {
-			yAxes : [
-				{
-					display   : true,
-					gridLines : {
-						color : 'lightgray'
-					},
-					ticks     : {
-						suggestedMin  : 0,
-						suggestedMax  : 10000,
-						maxTicksLimit : 6
-					}
-				}
+	let hourlyTrafficChart = new Chart(trafficChart, {
+		type    : 'line',
+		data    : {
+			labels   : [
+				'01-04',
+				'05-08',
+				'09-12',
+				'13-16',
+				'17-20',
+				'21-24'
 			],
-			xAxes : [
+			datasets : [
 				{
-					display   : true,
-					gridLines : {
-						color : 'lightgray'
-					}
+					data            : [
+						50,
+						100,
+						200,
+						600,
+						900,
+						175
+					],
+					backgroundColor : 'rgba(33, 182, 168, 0.2)',
+					borderColor     : 'rgb(33, 182, 168)'
 				}
 			]
+		},
+		options : {
+			legend : false,
+			scales : {
+				yAxes : [
+					{
+						display   : true,
+						gridLines : {
+							color : 'lightgray'
+						},
+						ticks     : {
+							suggestedMin  : 0,
+							suggestedMax  : 1000,
+							maxTicksLimit : 6
+						}
+					}
+				],
+				xAxes : [
+					{
+						display   : true,
+						gridLines : {
+							color : 'lightgray'
+						}
+					}
+				]
+			}
 		}
-	}
-});
+	});
 
-let monthlyTrafficChart = new Chart(trafficChart, {
-	type    : 'line',
-	data    : {
-		labels   : [
-			'Jul',
-			'Aug',
-			'Sep',
-			'Oct',
-			'Nov',
-			'Dec'
-		],
-		datasets : [
-			{
-				data            : [
-					31000,
-					30000,
-					28000,
-					32000,
-					54000,
-					48000
-				],
-				backgroundColor : 'rgba(33, 182, 168, 0.2)',
-				borderColor     : 'rgb(33, 182, 168)'
-			}
-		]
-	},
-	options : {
-		legend : false,
-		scales : {
-			yAxes : [
-				{
-					display   : true,
-					gridLines : {
-						color : 'lightgray'
-					},
-					ticks     : {
-						suggestedMin  : 0,
-						suggestedMax  : 10000,
-						maxTicksLimit : 8
-					}
-				}
+	let dailyTrafficChart = new Chart(trafficChart, {
+		type    : 'line',
+		data    : {
+			labels   : [
+				'Mon',
+				'Tue',
+				'Wed',
+				'Thu',
+				'Fri',
+				'Sat'
 			],
-			xAxes : [
+			datasets : [
 				{
-					display   : true,
-					gridLines : {
-						color : 'lightgray'
-					}
+					data            : [
+						1200,
+						1050,
+						1250,
+						1800,
+						1600,
+						1200,
+						1000
+					],
+					backgroundColor : 'rgba(33, 182, 168, 0.2)',
+					borderColor     : 'rgb(33, 182, 168)'
 				}
 			]
+		},
+		options : {
+			legend : false,
+			scales : {
+				yAxes : [
+					{
+						display   : true,
+						gridLines : {
+							color : 'lightgray'
+						},
+						ticks     : {
+							suggestedMin  : 0,
+							suggestedMax  : 200,
+							maxTicksLimit : 6
+						}
+					}
+				],
+				xAxes : [
+					{
+						display   : true,
+						gridLines : {
+							color : 'lightgray'
+						}
+					}
+				]
+			}
 		}
+	});
+
+	let weeklyTrafficChart = new Chart(trafficChart, {
+		type    : 'line',
+		data    : {
+			labels   : [
+				'09/01-09/07',
+				'09/08-09/014',
+				'09/15-09/021',
+				'09/22-09/28'
+			],
+			datasets : [
+				{
+					data            : [
+						7000,
+						6700,
+						8200,
+						9000
+					],
+					backgroundColor : 'rgba(33, 182, 168, 0.2)',
+					borderColor     : 'rgb(33, 182, 168)'
+				}
+			]
+		},
+		options : {
+			legend : false,
+			scales : {
+				yAxes : [
+					{
+						display   : true,
+						gridLines : {
+							color : 'lightgray'
+						},
+						ticks     : {
+							suggestedMin  : 0,
+							suggestedMax  : 10000,
+							maxTicksLimit : 6
+						}
+					}
+				],
+				xAxes : [
+					{
+						display   : true,
+						gridLines : {
+							color : 'lightgray'
+						}
+					}
+				]
+			}
+		}
+	});
+
+	let monthlyTrafficChart = new Chart(trafficChart, {
+		type    : 'line',
+		data    : {
+			labels   : [
+				'Jul',
+				'Aug',
+				'Sep',
+				'Oct',
+				'Nov',
+				'Dec'
+			],
+			datasets : [
+				{
+					data            : [
+						31000,
+						30000,
+						28000,
+						32000,
+						54000,
+						48000
+					],
+					backgroundColor : 'rgba(33, 182, 168, 0.2)',
+					borderColor     : 'rgb(33, 182, 168)'
+				}
+			]
+		},
+		options : {
+			legend : false,
+			scales : {
+				yAxes : [
+					{
+						display   : true,
+						gridLines : {
+							color : 'lightgray'
+						},
+						ticks     : {
+							suggestedMin  : 0,
+							suggestedMax  : 10000,
+							maxTicksLimit : 8
+						}
+					}
+				],
+				xAxes : [
+					{
+						display   : true,
+						gridLines : {
+							color : 'lightgray'
+						}
+					}
+				]
+			}
+		}
+	});
+
+	if (target.classList.contains('hourly')) {
+		return hourlyTrafficChart;
+	}
+	else if (target.classList.contains('daily')) {
+		return dailyTrafficChart;
+	}
+	else if (target.classList.contains('weekly')) {
+		return weeklyTrafficChart;
+	}
+	else {
+		return monthlyTrafficChart;
 	}
 });
 
@@ -404,11 +423,3 @@ alertBanner.addEventListener('click', (e) => {
 //						       //
 // - - - - - Traffic - - - - - //
 // 							   //
-
-const chartDisplay = document.getElementsByClassName('traffic-nav-link');
-
-if (chartDisplay[0].classList.contains('hourly')) {
-}
-else {
-	console.log('wrong index');
-}
